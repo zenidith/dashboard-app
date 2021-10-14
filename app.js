@@ -10,6 +10,23 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     })
 
     fetch("https://api.coingecko.com/api/v3/coins/solana")
-    .then(res => res.json())
-    .then(data => console.log(data))
+    .then(res => {
+        if (!res.ok) {
+            throw Error("Something went wrong")
+        }
+        return res.json()
+    })
+    .then(data => {
+        /**
+         * Challenge: Add the name and icon of the cryptocurrency
+         * to the upper-left of the dashboard page
+         * 
+         * Use `data.name` and `data.image.small` to access that info
+         */
+        document.getElementById("crypto-top").innerHTML = `
+            <img src=${data.image.small} />
+            <span>${data.name}</span>
+        `
+    })
     .catch(err => console.error(err))
+
