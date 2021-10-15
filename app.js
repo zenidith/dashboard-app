@@ -17,15 +17,18 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         return res.json()
     })
     .then(data => {
-        /**
-         * Challenge: Add the name and icon of the cryptocurrency
-         * to the upper-left of the dashboard page
-         * 
-         * Use `data.name` and `data.image.small` to access that info
-         */
         document.getElementById("crypto-top").innerHTML = `
             <img src=${data.image.small} />
             <span>${data.name}</span>
+        `
+        document.getElementById("market").innerHTML = `🎯: 
+            ${data.market_data.current_price.aud}
+        `
+      document.getElementById("high").innerHTML = `📈: 
+            ${data.market_data.high_24h.aud}
+        `
+      document.getElementById("low").innerHTML = `📉: 
+            ${data.market_data.low_24h.aud}
         `
     })
     .catch(err => console.error(err))
