@@ -1,3 +1,14 @@
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes();
+
+time() {
+
+
+document.getElementById("time").textContent = `
+${time}
+`
+}
+
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=korea")
     .then(res => res.json())
     .then(data => {
@@ -22,9 +33,9 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
             <span>${data.name}</span>
         `
         document.getElementById("crypto").innerHTML += `
-            <p>Current: A$${data.market_data.current_price.aud}</p>
-            <p>24hr high: A$${data.market_data.high_24h.aud}</p>
-            <p>24hr low: A$${data.market_data.low_24h.aud}</p>
+            <p>now: A$${data.market_data.current_price.aud}</p>
+            <p>high: A$${data.market_data.high_24h.aud}</p>
+            <p>low: A$${data.market_data.low_24h.aud}</p>
         `
     })
 
