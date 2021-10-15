@@ -1,5 +1,11 @@
-var today = new Date();
-var time = today.getHours() + ":" + today.getMinutes();
+// var today = new Date();
+// var time = today.getHours() + ":" + today.getMinutes();
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#parameters
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters
+// to toLocaleTimeString
+const date = new Date()
+console.log(date.toLocaleTimeString("en-us", {timeStyle: "short"}))
 
 time() {
 
