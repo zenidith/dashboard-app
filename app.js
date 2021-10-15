@@ -21,15 +21,13 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
             <img src=${data.image.small} />
             <span>${data.name}</span>
         `
-        document.getElementById("market").innerHTML = `🎯: 
-            ${data.market_data.current_price.aud}
-        `
-      document.getElementById("high").innerHTML = `📈: 
-            ${data.market_data.high_24h.aud}
-        `
-      document.getElementById("low").innerHTML = `📉: 
-            ${data.market_data.low_24h.aud}
+        document.getElementById("crypto").innerHTML += `
+            <p>Current: A$${data.market_data.current_price.aud}</p>
+            <p>24hr high: A$${data.market_data.high_24h.aud}</p>
+            <p>24hr low: A$${data.market_data.low_24h.aud}</p>
         `
     })
+
+        
     .catch(err => console.error(err))
 
