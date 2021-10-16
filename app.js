@@ -1,19 +1,4 @@
-// var today = new Date();
-// var time = today.getHours() + ":" + today.getMinutes();
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#parameters
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters
-// to toLocaleTimeString
-
-const date = new Date()
-document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
-    
-// document.getElementById("time").textContent = `
-// ${time}
-// `
-
-
-fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=korea")
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=coffee")
     .then(res => res.json())
     .then(data => {
         document.body.style.backgroundImage = `url(${data.urls.regular})`
@@ -45,3 +30,10 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 
         
     .catch(err => console.error(err))
+
+function getCurrentTime() {
+    const date = new Date()
+    document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
+}
+
+setInterval(getCurrentTime, 1000)
