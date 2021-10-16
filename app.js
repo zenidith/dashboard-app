@@ -1,19 +1,17 @@
 // var today = new Date();
 // var time = today.getHours() + ":" + today.getMinutes();
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#parameters
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#parameters
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters
 // to toLocaleTimeString
+
 const date = new Date()
-console.log(date.toLocaleTimeString("en-us", {timeStyle: "short"}))
+document.getElementById("time").textContent = date.toLocaleTimeString("en-us", {timeStyle: "short"})
+    
+// document.getElementById("time").textContent = `
+// ${time}
+// `
 
-time() {
-
-
-document.getElementById("time").textContent = `
-${time}
-`
-}
 
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=korea")
     .then(res => res.json())
@@ -47,4 +45,3 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
 
         
     .catch(err => console.error(err))
-
