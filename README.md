@@ -1,6 +1,6 @@
 <h3>Personal Dashboard page/extension</h3>
 
-![image of the personal dashboard](https://github.com/zenidith/dashboard-app/images/image.png)
+![image of the personal dashboard](https://user-images.githubusercontent.com/30232105/137617258-33885118-db0d-400e-970d-107dbd92da8f.png)
 
 In this project for Scrimba's Front End Developer Path, I created a dashboard page and then converted it to a Chrome Extension. It calls upon various APIs, such as:
 - Coingecko for Solana's current information
