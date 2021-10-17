@@ -1,6 +1,6 @@
 <h3>Personal Dashboard page/extension</h3>
 
-![image of the personal dashboard](images/image.png?raw=true)
+![image of the personal dashboard](../../images/image.png?raw=true)
 
 In this project for Scrimba's Front End Developer Path, I created a dashboard page and then converted it to a Chrome Extension. It calls upon various APIs, such as:
 - Coingecko for Solana's current information
