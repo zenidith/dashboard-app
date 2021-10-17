@@ -1,10 +1,10 @@
 // background image and default
-fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=coffee")
+fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=korea")
     .then(res => res.json())
     .then(data => {
         document.body.style.backgroundImage = `url(${data.urls.regular})`
         // document.p.style = ``
-        document.getElementById("author").textContent = `By: ${data.user.name}`
+        document.getElementById("author").textContent = `photograph: ${data.user.name}`
     })
     .catch(err => {
         document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1588043213440-fd9c881853e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzM5MTg5MTk&ixlib=rb-1.2.1&q=80&w=1080)`
@@ -55,7 +55,7 @@ navigator.geolocation.getCurrentPosition(position => {
             const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
             document.getElementById("weather").innerHTML = `
                 <img src=${iconUrl} />    
-                <p>${Math.round(data.main.temp)} c</p>
+                <p class="weather-temp">${Math.round(data.main.temp)} c</p>
                 <p class="weather-city">${data.name}</p>
             `
         })
