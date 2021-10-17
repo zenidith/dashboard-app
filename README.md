@@ -2,6 +2,8 @@
 
 ![image of the personal dashboard](https://github.com/zenidith/dashboard-app/images/image.png)
 
+<img alt="Image of the personal dashboard" src="https://github.com/zenidith/dashboard-app/images/image.png">
+
 In this project for Scrimba's Front End Developer Path, I created a dashboard page and then converted it to a Chrome Extension. It calls upon various APIs, such as:
 - Coingecko for Solana's current information
 - Open Weather for current Geolocation weather icon/temperature and city. 
