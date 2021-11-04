@@ -82,3 +82,10 @@ p#author {
     font-size: 0.7rem;
     opacity: 0.5;
 }
+
+.container {
+    border: 1px solid #474747;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
