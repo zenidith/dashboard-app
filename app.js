@@ -4,7 +4,7 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     .then(data => {
         document.body.style.backgroundImage = `url(${data.urls.full})`
         // document.p.style = ``
-        document.getElementById("author").textContent = `photograph: ${data.user.name}`
+        document.getElementById("photo").textContent = `photograph: ${data.user.name}`
     })
     .catch(err => {
         document.body.style.backgroundImage = `url(https://images.unsplash.com/photo-1588043213440-fd9c881853e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDI0NzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MzM5MTg5MTk&ixlib=rb-1.2.1&q=80&w=1080)`
