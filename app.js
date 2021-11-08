@@ -65,3 +65,8 @@ navigator.geolocation.getCurrentPosition(position => {
 // cat quotes 
 
 fetch("https://cat-fact.herokuapp.com//facts/random?animal_type=cat&amount=1")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+// fetchCatQuotes();
